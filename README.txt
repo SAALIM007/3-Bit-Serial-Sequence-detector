@@ -1,1 +1,0 @@
-This is verilog code for a serial 3 bit sequence detector. The sequence is parameterized in the code.
