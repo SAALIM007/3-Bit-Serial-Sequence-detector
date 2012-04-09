@@ -9,6 +9,14 @@ module SerialSequenceDetector_tb;
 	// Outputs
 	wire detected;
 
+	// Parameters for testing
+	parameter NoOfTestingBits = 10;
+	
+	// Seed for random number
+	
+	integer seed = 4;
+	
+	
 	// Instantiate the Unit Under Test (UUT)
 	SerialSequenceDetector uut (
 		.si(si), 
@@ -24,9 +32,9 @@ module SerialSequenceDetector_tb;
 		si = 0;
 		clk = 1;
 		
-		for(i = 0;i<10;i=i+1)begin
+		for(i = 0;i<NoOfTestingBits;i=i+1)begin
 			#10;
-			si = $random;
+			si = $random(seed);
 		end
 		
 		$finish;
