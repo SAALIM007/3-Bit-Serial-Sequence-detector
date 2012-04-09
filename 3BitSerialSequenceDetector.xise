@@ -16,8 +16,14 @@
 
   <files>
     <file xil_pn:name="SerialSequenceDetector.v" xil_pn:type="FILE_VERILOG">
-      <association xil_pn:name="Implementation"/>
       <association xil_pn:name="BehavioralSimulation"/>
+      <association xil_pn:name="Implementation"/>
+    </file>
+    <file xil_pn:name="SerialSequenceDetector_tb.v" xil_pn:type="FILE_VERILOG">
+      <association xil_pn:name="BehavioralSimulation"/>
+      <association xil_pn:name="PostRouteSimulation"/>
+      <association xil_pn:name="PostMapSimulation"/>
+      <association xil_pn:name="PostTranslateSimulation"/>
     </file>
   </files>
 
@@ -28,9 +34,11 @@
     <property xil_pn:name="Fitter Report Format" xil_pn:value="HTML"/>
     <property xil_pn:name="Implementation Top" xil_pn:value="Module|SerialSequenceDetector"/>
     <property xil_pn:name="Implementation Top Instance Path" xil_pn:value="/SerialSequenceDetector"/>
+    <property xil_pn:name="PROP_BehavioralSimTop" xil_pn:value="Module|SerialSequenceDetector_tb"/>
     <property xil_pn:name="PROP_DesignName" xil_pn:value="3BitSerialSequenceDetector"/>
     <property xil_pn:name="Package" xil_pn:value="vq100"/>
     <property xil_pn:name="Preferred Language" xil_pn:value="Verilog"/>
+    <property xil_pn:name="Selected Simulation Root Source Node Behavioral" xil_pn:value="Module|SerialSequenceDetector_tb"/>
     <property xil_pn:name="Simulator" xil_pn:value="ISim (VHDL/Verilog)"/>
     <property xil_pn:name="Speed Grade" xil_pn:value="-5"/>
     <property xil_pn:name="Synthesis Tool" xil_pn:value="XST (VHDL/Verilog)"/>
