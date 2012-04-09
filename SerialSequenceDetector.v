@@ -9,13 +9,12 @@ module SerialSequenceDetector(
 	reg [2:0] CurrentSequence;
 	parameter Sequence = 3'b101;
 	
-	initial CurrentSequence = 3'b000;
 	always @(posedge clk)begin
-		CurrentSequence = { CurrentSequence[1:0],si };
+		CurrentSequence <= { CurrentSequence[1:0],si };
 		if(CurrentSequence == Sequence)
-			detected = 1'b1;
+			detected <= 1'b1;
 		else
-			detected = 1'b0;
+			detected <= 1'b0;
 	end
 
 endmodule
