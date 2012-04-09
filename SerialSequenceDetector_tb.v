@@ -16,21 +16,18 @@ module SerialSequenceDetector_tb;
 		.detected(detected)
 	);
 
+	integer i;
+	
 	always #5 clk = ~clk;
 	initial begin
 	
 		si = 0;
 		clk = 1;
 		
-		#10;
-		si = 1;
-		
-		#10;
-		si = 0;
-		#10;
-		si = 1;
-		#20;
-		si = 0;
+		for(i = 0;i<10;i=i+1)begin
+			#10;
+			si = $random;
+		end
 		
 		$finish;
 	end
